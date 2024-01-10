@@ -1,19 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './Search.css';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
+
 
 function Search({ hideButtons = false }) {
 
-    const [input, setInput] = useState("");    // this one is used to store the value whatever we will search in the search bar to make it the reusable component
+    const [{ }, dispatch] = useStateValue();
+
+    const [input, setInput] = useState("");  // here we are mapping it to input below whatever we will type it will be stored in state..
     const navigate = useNavigate();
 
     const search = e => {     // this function is connected to google search buttom 
         e.preventDefault();
 
-        navigate('/Search');
+        console.log('you hit the search button >>', input)
+
+        dispatch({
+            type: actionTypes.SET_SEARCH_TERM,
+            term: input
+        })
+
+        navigate('/search')
+
+
     };
 
     return (
@@ -37,7 +51,8 @@ function Search({ hideButtons = false }) {
                 <div className='search_buttons'>
 
                     <Button className='search_buttonsHidden' type='submit' onClick={search} variant='outlined'> Google Search </Button>
-                    <Button variant='outlined'> I'm Feeling Lucky </Button>
+                    <Button className='search_buttonsHidden' variant='outlined'> I'm Feeling Lucky </Button>
+
 
                 </div>
             )}
@@ -45,4 +60,4 @@ function Search({ hideButtons = false }) {
     )
 }
 
-export default Search 
+export default Search;

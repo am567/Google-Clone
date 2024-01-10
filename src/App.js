@@ -3,11 +3,12 @@ import './App.css';
 import Home from "./Pages/Home";
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Searchpage from './Searchpage';
 
-function Searchpage() {
-  
+/*function Searchpage() {
+
   return <h1>This is the SEARCHPAGE</h1>;
-}
+}*/
 
 
 
@@ -17,17 +18,15 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path='/Search' exact element={<Searchpage/>}/>
- 
-          <Route path='/' element={<Home/>}/>
-            
-            
-                         
-          
+          <Route path='/Search' exact element={<Searchpage />} />
+
+          <Route path='/' element={<Home />} />
+
+
         </Routes>
       </Router>
 
-     
+
     </div>
   );
 }

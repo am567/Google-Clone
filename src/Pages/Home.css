@@ -1,7 +1,7 @@
 .home {
 
-    display: flex ;
-    flex-direction: column ;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
 
 
@@ -10,14 +10,14 @@
 .home_header {
 
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between;
     padding: 20px 30px;
     align-items: center;
 }
 
 .home_header a {
 
-    margin-right: 20px ;
+    margin-right: 20px;
     text-decoration: inherit;
     color: rgba(0, 0, 0, 0.87);
     font-size: 15px;
@@ -36,24 +36,25 @@
     justify-content: space-between;
 }
 
-.home_headerright> .MuiSvgIcon-root {
+.home_headerright>.MuiSvgIcon-root {
 
     margin-right: 20px;
 }
 
 .home_Body {
 
-    
+
     flex: 1;
     display: flex;
     margin-top: 10%;
-    flex-direction: column;   /*{ basically used to shift the google icon in center... it is used as default }*/
-    
+    flex-direction: column;
+    /*{ basically used to shift the google icon in center... it is used as default }*/
+
 
 }
 
-.home_Body > img {
+.home_Body>img {
 
-    object-fit: contain ;
+    object-fit: contain;
     height: 100px;
 }

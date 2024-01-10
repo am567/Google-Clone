@@ -16,14 +16,14 @@ function Home() {
         <div className='home_headerleft'>
 
           <Link to='/about'>About</Link>
-          <Link to='/about'>Store</Link>
+          <Link to='/store'>Store</Link>
 
         </div>
 
         <div className='home_headerright'>
 
-          <Link to='/about'>Gmail</Link>
-          <Link to='/about'>Images</Link>
+          <Link to='/gmail'>Gmail</Link>
+          <Link to='/images'>Images</Link>
           <AppsIcon />
           <Avatar />
 
@@ -39,7 +39,7 @@ function Home() {
 
         />
         <div className='home_inputContainer'>
-          <Search />
+          <Search hideButtons />
         </div>
 
       </div>
